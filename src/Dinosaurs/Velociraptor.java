@@ -42,7 +42,7 @@ public class Velociraptor extends Dinosaur{
     
     @Override
     public String toString(){
-        String str= super.toString() + "Agility Level: " + this.getAgilityLevel() + "\nSpeed: " + this.getSpeed();
+        String str= super.toString() + "nAgility Level: " + this.getAgilityLevel() + "\nSpeed: " + this.getSpeed();
         return str;
     }
     
