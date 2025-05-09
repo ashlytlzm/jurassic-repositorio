@@ -37,6 +37,7 @@ public class Aerial extends Habitat{
    
     @Override
     public void addDino(Dinosaur dino){
+        this.dinosInHabitat.add(dino);
     }
    
     @Override

@@ -39,6 +39,7 @@ public class Marine extends Habitat{
     
     @Override
     public void addDino(Dinosaur dino){
+        this.dinosInHabitat.add(dino);
     }
     
     @Override

@@ -38,6 +38,7 @@ public class Terrestrial extends Habitat{
     
     @Override
     public void addDino(Dinosaur dino){
+        this.dinosInHabitat.add(dino);
     }
     
     @Override
