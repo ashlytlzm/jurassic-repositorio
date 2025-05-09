@@ -35,10 +35,7 @@ public class Velociraptor extends Dinosaur{
     public double getSpeed(){
         return this.speed;
     }
-    public void climbStructures(){
-    }
-    public void huntInPack(){
-    }
+
     
     @Override
     public String toString(){

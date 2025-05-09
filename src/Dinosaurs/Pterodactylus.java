@@ -36,10 +36,7 @@ public class Pterodactylus extends Dinosaur{
     public double getFlightRange(){
         return this.flightRange;
     }
-    public void glideLongDistances(){
-    }
-    public void diveAttack(){
-    }
+
     
     @Override
     public String toString(){

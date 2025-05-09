@@ -36,10 +36,7 @@ public class Branchiosaurus extends Dinosaur{
     public double getDailyFoodIntake(){
         return this.dailyFoodIntake;
     }
-    public void eadtFromTallTrees(){
-    }
-    public void stompGround(){
-    }
+
     
     @Override
     public String toString(){
