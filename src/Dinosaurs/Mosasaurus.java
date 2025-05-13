@@ -10,8 +10,8 @@ public class Mosasaurus extends Dinosaur{
         this.SwimDepth = 0;
         this.behavior = null;
     }
-    public Mosasaurus(String name, int age, double weigth, double swimDepth, String behavior){
-        super(name, age, weigth);
+    public Mosasaurus(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int dailyAmount, int frecuency, double swimDepth, String behavior){
+        super(id, vetId, trainerId, name, age, weigth,typeOfFood, dailyAmount,frecuency);
         this.setSwimDepth(swimDepth);
         this.setBehavior(behavior);
     }

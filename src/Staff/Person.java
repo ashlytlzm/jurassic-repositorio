@@ -39,9 +39,9 @@ public abstract class Person {
         }
         else{
             this.id = id;
-    
         }
     }
+    
     public String getName(){
         return this.name;
     }
