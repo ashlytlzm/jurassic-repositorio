@@ -44,7 +44,11 @@ public class Feeding {
         this.frecuency = frecuency;
     }
     
-    
-    
+    @Override
+    public String toString(){
+        String str = "\nType os food: " + this.getTypeOfFood() + "\nDaily Amount: " +
+                 this.getDailyAmount() + "\nFrecuency: " + this.getFrecuency();
+        return str;
+    }
     
 }
