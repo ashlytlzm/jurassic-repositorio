@@ -14,8 +14,8 @@ public class Veterinarian extends Person implements DinoStaffFunctions{
     public Veterinarian(){
         this.specialization = null;
     }
-    public Veterinarian(String name, int age, String specialization){
-        super(name, age);
+    public Veterinarian(String name, int age, int id, String specialization){
+        super(name, age, id);
         this.setSpecialization(specialization);
     }
     

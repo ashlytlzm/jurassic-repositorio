@@ -12,8 +12,8 @@ public class Shopkeeper extends Person{
         this.inventoryManaged = 0;
         this.workOvertime = 0;
     }
-    public Shopkeeper(String name, int age,int inventoryManaged, double workOvertime){
-        super(name, age);
+    public Shopkeeper(String name, int age, int id, int inventoryManaged, double workOvertime){
+        super(name, age, id);
         this.setInventoryManaged(inventoryManaged);
         this.setWorkOvertime(workOvertime);
     }

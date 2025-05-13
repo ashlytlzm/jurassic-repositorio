@@ -13,8 +13,8 @@ public class Trainer  extends Person implements DinoStaffFunctions{
         this.experienceYears = 0;
         this.speciality = null;
     }
-    public Trainer(String name, int age, int experienceYears, String speciality){
-        super(name, age);
+    public Trainer(String name, int age, int id, int experienceYears, String speciality){
+        super(name, age, id);
         this.setExperienceYears(experienceYears);
         this.setSpeciality(speciality);
     }
