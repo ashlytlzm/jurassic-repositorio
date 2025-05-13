@@ -1,20 +1,30 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-package jurassicpark_project;
 
-/**
- *
- * @author Juan Diego Castro
- */
+package jurassicpark_project;
+import Dinosaurs.*;
+import Staff.*;
+import Habitats.*;
+import Feedings.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
+
 public class JurassicPark_Project {
 
-    /**
-     * @param args the command line arguments
-     */
+   
     public static void main(String[] args) {
         System.out.println("hola");
+        ArrayList<Dinosaur> dinosaurs = new ArrayList<>();
+        ArrayList<Person> staff = new ArrayList<>();
+        ArrayList<Habitat> habitats = new ArrayList<>();
+        
+        for(Person b: staff){
+            
+        }
+        for(Habitat b: habitats){
+            
+        }
     }
     
 }
