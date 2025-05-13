@@ -36,10 +36,6 @@ public class Shopkeeper extends Person{
     public double getWorkOvertime(){
         return this.workOvertime;
     }
-    public void processSales(){
-    }
-    public void restockItems(){
-    }
     
     @Override
     public double getSalary(){
@@ -50,7 +46,7 @@ public class Shopkeeper extends Person{
     @Override
     public String toString(){
         String str = super.toString() + "\nInventory Managed: " + this.getInventoryManaged() +
-                "\nWorkOvertime: " + this.getWorkOvertime();
+                "\nWorkOvertime: " + this.getWorkOvertime() + " hours";
         return str;
     }
 }

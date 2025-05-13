@@ -1,5 +1,6 @@
 
 package Feedings;
+import Dinosaurs.*;
 
 
 public class Feeding {

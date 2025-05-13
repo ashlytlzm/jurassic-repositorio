@@ -16,8 +16,8 @@ public class Veterinarian extends Person implements DinoStaffFunctions{
     }
     public Veterinarian(String name, int age, String specialization){
         super(name, age);
-        
-    };
+        this.setSpecialization(specialization);
+    }
     
     public void setSpecialization(String specialization){
         if(specialization == null || specialization.isBlank() || specialization.matches(".*[-!@#$%^&*()+=<>?/].*")){
@@ -57,7 +57,7 @@ public class Veterinarian extends Person implements DinoStaffFunctions{
     }
     @Override
     public String toString(){
-        String str = "";
+        String str = super.toString() + "\nSpecialization: " + this.getSpecialization();
          return str;
     }
 }

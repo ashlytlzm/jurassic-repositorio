@@ -35,10 +35,6 @@ public class Trainer  extends Person implements DinoStaffFunctions{
     public String getSpeciality(){
         return this.speciality;
     }
-    public void trainDinosaur(){
-    }
-    public void calmDinosaur(){
-    }
     
     @Override
     public void addDino(Dinosaur dino){
