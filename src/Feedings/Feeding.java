@@ -9,6 +9,9 @@ public class Feeding {
     private int frecuency;
 
      public Feeding() {
+         this.typeOfFood = null;
+         this.dailyAmount = 0;
+         this.frecuency = 0;
         
     }
     public Feeding(String typeOfFood, int dailyAmount, int frecuency) {
