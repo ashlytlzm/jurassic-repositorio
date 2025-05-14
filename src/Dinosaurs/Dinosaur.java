@@ -1,6 +1,8 @@
 
 package Dinosaurs;
 
+import Feedings.Feeding;
+
 
 public abstract class Dinosaur {
     private String id;
@@ -12,6 +14,7 @@ public abstract class Dinosaur {
     private String typeOfFood;
     private int dailyAmount;
     private int frecuency;
+    private Feeding feeding;
     
     public Dinosaur(){
         this.id = null;
@@ -96,6 +99,9 @@ public abstract class Dinosaur {
     }
     public double getWeigth(){
         return this.weigth;
+    }
+    public void addFeeding(){
+        this.feeding = new Feeding(this.typeOfFood,this.dailyAmount,this.frecuency);
     }
     
     @Override
