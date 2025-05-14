@@ -4,16 +4,16 @@ package Dinosaurs;
 
 public class Branchiosaurus extends Dinosaur{
     private double neckLength;
-    private double dailyFoodIntake;
+    private double dailyWaterIntake;
     
     public Branchiosaurus(){
         this.neckLength = 0;
-        this.dailyFoodIntake = 0;
+        this.dailyWaterIntake = 0;
     }
-    public Branchiosaurus(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int amountPerMeal, int frecuency, double neckLength, double dailyFoodIntake){
+    public Branchiosaurus(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int amountPerMeal, int frecuency, double neckLength, double dailyWaterIntake){
         super(id, vetId, trainerId, name, age, weigth,typeOfFood, amountPerMeal,frecuency);
         this.setNeckLength(neckLength);
-        this.setDailyFoodIntake(dailyFoodIntake);
+        this.setDailyWaterIntake(dailyWaterIntake);
     }
     
     public void setNeckLength(double neckLength){
@@ -23,25 +23,25 @@ public class Branchiosaurus extends Dinosaur{
             this.neckLength = neckLength;
         }
     }
-    public void setDailyFoodIntake(double dailyFoodIntake){
-        if(dailyFoodIntake < 1 || dailyFoodIntake > 28){
+    public void setDailyWaterIntake(double dailyWaterIntake){
+        if(dailyWaterIntake < 1 || dailyWaterIntake > 150){
             throw new IllegalArgumentException("The Daily Food Intake is not valid.");
         }else{
-            this.dailyFoodIntake = dailyFoodIntake;
+            this.dailyWaterIntake = dailyWaterIntake;
         }
     }
     public double getNeckLength(){
         return this.neckLength;
     }
-    public double getDailyFoodIntake(){
-        return this.dailyFoodIntake;
+    public double getDailyWaterIntake(){
+        return this.dailyWaterIntake;
     }
 
     
     @Override
     public String toString(){
         String str = super.toString() + "\nNeck Length: " + this.getNeckLength() + "cm" +
-                "\nDaily Food Intake: " + this.getDailyFoodIntake();
+                "\nDaily Food Intake: " + this.getDailyWaterIntake() + "L";
         return str;
     }
     
