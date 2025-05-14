@@ -14,6 +14,7 @@ public abstract class Dinosaur {
     private int frecuency;
     
     public Dinosaur(){
+        this.id = null;
         this.name = null;
         this.age = 0;
         this.weigth = 0;

@@ -5,13 +5,14 @@ package Staff;
 public abstract class Person {
     private String name;
     private int age;
-    protected int id;
+    protected String id;
     
     public Person(){
+        this.id = null;
         this.name = null;
         this.age = 0;
     }
-    public Person(String name, int age, int id){
+    public Person(String name, int age, String id){
         this.setName(name);
         this.setAge(age);
         this.setId(id);
@@ -33,8 +34,8 @@ public abstract class Person {
             this.age = age;
         }
     }
-    public void setId(int id){
-        if (id<01){
+    public void setId(String id){
+       if (id == null || id.isBlank() || id.matches(".*[-!@#$%^&*()+=<>?/].*")){
             throw new IllegalArgumentException("The id is not valid.");
         }
         else{
@@ -48,7 +49,7 @@ public abstract class Person {
     public int getAge(){
         return this.age;
     }
-    public int getId(){
+    public String getId(){
         return this.id;
     }
     public abstract double getSalary();
