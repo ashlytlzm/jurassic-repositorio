@@ -40,7 +40,7 @@ public class Pterodactylus extends Dinosaur{
     
     @Override
     public String toString(){
-        String str = super.toString() + "nWingspan: " + this.getWingspan() + "\nFlight Range: " + this.getFlightRange();
+        String str = super.toString() + "nWingspan: " + this.getWingspan() + "cm" + "\nFlight Range: " + this.getFlightRange() + "Km";
         return str;
     }
     

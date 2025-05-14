@@ -40,7 +40,7 @@ public abstract class Dinosaur {
         }
     }
     public void setAge(int age){
-        if(age< 1){
+        if(age< 1 || age < 250){
             throw new IllegalArgumentException("The Age is not valid.");
         }else{
             this.age = age;
@@ -99,7 +99,7 @@ public abstract class Dinosaur {
     
     @Override
     public String toString(){
-        String str = "\nName: " + this.getName() + "\nAge: " + this.getAge() + "\nWeigth: " + this.getWeigth() + "kg";
+        String str = "\nId: " + this.getId() +"\nName: " + this.getName() + "\nAge: " + this.getAge() + "\nWeigth: " + this.getWeigth() + "kg";
         return str;
     }
 }

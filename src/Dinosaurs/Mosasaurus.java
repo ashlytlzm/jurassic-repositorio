@@ -45,7 +45,7 @@ public class Mosasaurus extends Dinosaur{
     
     @Override
     public String toString(){
-        String str = super.toString() + "\nSwimDepth: " + this.getSwimDepth() + "\nBehavior: " + this.getBehavior();
+        String str = super.toString() + "\nSwimDepth: " + this.getSwimDepth() + "m" + "\nBehavior: " + this.getBehavior();
         return str;
     }
 }

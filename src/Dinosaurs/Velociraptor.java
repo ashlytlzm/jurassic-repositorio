@@ -23,10 +23,10 @@ public class Velociraptor extends Dinosaur{
         }
     }
     public void setSpeed(double speed){
-        if(speed < 1){
+        if(speed < 1 || speed > 400){
             throw new IllegalArgumentException("The Speed is not valid.");
         }else{
-            this.speed= speed;
+            this.speed = speed;
         }
     }
     public int getAgilityLevel(){
@@ -39,7 +39,7 @@ public class Velociraptor extends Dinosaur{
     
     @Override
     public String toString(){
-        String str= super.toString() + "nAgility Level: " + this.getAgilityLevel() + "\nSpeed: " + this.getSpeed() + "km/h";
+        String str= super.toString() + "nAgility Level: " + this.getAgilityLevel() + "\nSpeed: " + this.getSpeed() + "Km/h";
         return str;
     }
     
