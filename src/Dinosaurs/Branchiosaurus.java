@@ -17,14 +17,14 @@ public class Branchiosaurus extends Dinosaur{
     }
     
     public void setNeckLength(double neckLength){
-        if(neckLength < 1){
+        if(neckLength < 1 || neckLength >300){
             throw new IllegalArgumentException("The Neck Length is not valid.");
         }else{
             this.neckLength = neckLength;
         }
     }
     public void setDailyFoodIntake(double dailyFoodIntake){
-        if(dailyFoodIntake < 1){
+        if(dailyFoodIntake < 1 || dailyFoodIntake > 28){
             throw new IllegalArgumentException("The Daily Food Intake is not valid.");
         }else{
             this.dailyFoodIntake = dailyFoodIntake;
@@ -40,7 +40,8 @@ public class Branchiosaurus extends Dinosaur{
     
     @Override
     public String toString(){
-        String str = "";
+        String str = super.toString() + "\nNeck Length: " + this.getNeckLength() + "cm" +
+                "\nDaily Food Intake: " + this.getDailyFoodIntake();
         return str;
     }
     
