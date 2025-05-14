@@ -10,8 +10,8 @@ public class Velociraptor extends Dinosaur{
         this.agilityLevel = 0;
         this.speed= 0;
     }
-    public Velociraptor(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int dailyAmount, int frecuency, int agilityLevel, double speed){
-        super(id, vetId, trainerId, name, age, weigth,typeOfFood, dailyAmount,frecuency);
+    public Velociraptor(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int amountPerMeal, int frecuency, int agilityLevel, double speed){
+        super(id, vetId, trainerId, name, age, weigth,typeOfFood, amountPerMeal,frecuency);
         this.setAgilityLevel(agilityLevel);
         this.setSpeed(speed);
     }

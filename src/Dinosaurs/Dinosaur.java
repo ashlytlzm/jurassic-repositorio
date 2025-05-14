@@ -12,7 +12,7 @@ public abstract class Dinosaur {
     private int age;
     private double weigth;
     private String typeOfFood;
-    private int dailyAmount;
+    private int amountPerMeal;
     private int frecuency;
     private Feeding feeding;
     
@@ -22,7 +22,7 @@ public abstract class Dinosaur {
         this.age = 0;
         this.weigth = 0;
     }
-    public Dinosaur(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int dailyAmount, int frecuency){
+    public Dinosaur(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int amountPerMeal, int frecuency){
         
         this.setId(id);
         this.setVetId(vetId);
@@ -31,7 +31,7 @@ public abstract class Dinosaur {
         this.setAge(age);
         this.setWeigth(weigth);
         this.typeOfFood = typeOfFood;
-        this.dailyAmount = dailyAmount;
+        this.amountPerMeal = amountPerMeal;
         this.frecuency = frecuency;
         
     }
@@ -101,7 +101,7 @@ public abstract class Dinosaur {
         return this.weigth;
     }
     public void addFeeding(){
-        this.feeding = new Feeding(this.typeOfFood,this.dailyAmount,this.frecuency);
+        this.feeding = new Feeding(this.typeOfFood,this.amountPerMeal,this.frecuency);
     }
     
     @Override

@@ -10,8 +10,8 @@ public class Pterodactylus extends Dinosaur{
         this.flightRange = 0;
         this.wingspan = 0;
     }
-    public Pterodactylus(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int dailyAmount, int frecuency, double wingspan, double flightRange){
-        super(id, vetId, trainerId, name, age, weigth,typeOfFood, dailyAmount,frecuency);
+    public Pterodactylus(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int amountPerMeal, int frecuency, double wingspan, double flightRange){
+        super(id, vetId, trainerId, name, age, weigth,typeOfFood, amountPerMeal,frecuency);
         this.setWingspan(wingspan);
         this.setFlightRange(flightRange);
     }

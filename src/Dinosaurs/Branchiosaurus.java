@@ -10,8 +10,8 @@ public class Branchiosaurus extends Dinosaur{
         this.neckLength = 0;
         this.dailyFoodIntake = 0;
     }
-    public Branchiosaurus(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int dailyAmount, int frecuency, double neckLength, double dailyFoodIntake){
-        super(id, vetId, trainerId, name, age, weigth,typeOfFood, dailyAmount,frecuency);
+    public Branchiosaurus(String id, String vetId, String trainerId, String name, int age, double weigth, String typeOfFood, int amountPerMeal, int frecuency, double neckLength, double dailyFoodIntake){
+        super(id, vetId, trainerId, name, age, weigth,typeOfFood, amountPerMeal,frecuency);
         this.setNeckLength(neckLength);
         this.setDailyFoodIntake(dailyFoodIntake);
     }
