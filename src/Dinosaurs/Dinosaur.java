@@ -57,29 +57,27 @@ public abstract class Dinosaur {
             this.weigth = weigth;
         }
     }
-     public void setId(String id){
-        if (id == null || id.isBlank() || id.matches(".*[-!@#$%^&*()+=<>?/].*")){
-            throw new IllegalArgumentException("The id is not valid.");
-        }
-        else{
+    public void setId(String id) {
+        if (id == null || id.isBlank() || !id.matches("\\d+")) {
+            throw new IllegalArgumentException("The vetId must contain only numbers.");
+        } else {
             this.id = id;
         }
     }
-    public void setVetId(String vetId){
-        if (vetId == null || vetId.isBlank() || vetId.matches(".*[-!@#$%^&*()+=<>?/].*")){
-            throw new IllegalArgumentException("The vetId is not valid.");
-        }
-        else{
-            this.vetId = vetId;
-        }
+public void setVetId(String vetId){
+    if (vetId == null || vetId.isBlank() || !vetId.matches("\\d+")) {
+        throw new IllegalArgumentException("The vetId must contain only numbers.");
+    } else {
+        this.vetId = vetId;
     }
+}
+
      public void setTrainerId(String trainerId){
-        if (trainerId == null || trainerId.isBlank() || trainerId.matches(".*[-!@#$%^&*()+=<>?/].*")){
-            throw new IllegalArgumentException("The id is not valid.");
-        }
-        else{
-            this.trainerId = trainerId;
-        }
+        if (trainerId == null || trainerId.isBlank() || !vetId.matches("\\d+")) {
+        throw new IllegalArgumentException("The vetId must contain only numbers.");
+    } else {
+        this.trainerId = trainerId;
+    }
     }
     
     public String getId(){
