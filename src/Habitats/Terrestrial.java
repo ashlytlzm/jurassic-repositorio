@@ -11,8 +11,8 @@ public class Terrestrial extends Habitat{
         this.soilType = null;
         this.averageHumidity = 0;
     }
-    public Terrestrial(String habitatId, String ubication, String name,ArrayList<Dinosaur> dinosInHabitat, String soilType, double averageHumidity){
-        super(habitatId, ubication,name, dinosInHabitat);
+    public Terrestrial( String ubication, String name, String soilType, double averageHumidity){
+        super(ubication,name);
         this.setSoilType(soilType);
         this.setAverageHumidity(averageHumidity);
     }

@@ -11,8 +11,8 @@ public class Aerial extends Habitat{
         this.maxAltitude = 0;
         this.windSpeedAvg = 0;
     }
-    public Aerial(String habitatId, String ubication, String name,ArrayList<Dinosaur> dinosInHabitat, double maxAltitude, double windSpeedAvg){
-        super(habitatId, ubication,name, dinosInHabitat);
+    public Aerial(String ubication, String name, double maxAltitude, double windSpeedAvg){
+        super(ubication,name);
         this.setMaxAltitude(maxAltitude);
         this.setWindSpeedAvg(windSpeedAvg);
     }

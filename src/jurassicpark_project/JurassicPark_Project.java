@@ -104,72 +104,51 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
 
     public static ArrayList<Habitat> readHabitats(String filePath, ArrayList<Dinosaur> dinosaurs) {
 
+
         ArrayList<Habitat> habitats = new ArrayList<>();
 
         String line = "";
         String habitat = "";
         String ubication = "";
         String name = "";
-        String habitatId = "";
-        Dinosaur tempDino = null;
-        ArrayList<Dinosaur> dinosInHabitat = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
 
-                if (parts.length >= 6) {
-                    
-                    habitatId = parts[0].trim();
-                    habitat =  parts[1].trim();
-                    ubication = parts[2].trim();
-                    name = parts[3].trim();
+                if (parts.length >= 5) {
+                    habitat = parts[0].trim();
+                    ubication = parts[1].trim();
+                    name = parts[2].trim();
                     switch (habitat) {
                         case "Aerial" -> {
                             try {
 
-                                double maxAltitude = Double.parseDouble(parts[4].trim());
-                                double windSpeedAvg = Double.parseDouble(parts[5].trim());
-                                for(Dinosaur d: dinosaurs){
-                                    if(habitatId.equals(d.getId())){
-                                        dinosInHabitat.add(d);
-                                        
-                                    }
-                                }
-                                habitats.add(new Aerial(habitatId, ubication, name,dinosInHabitat, maxAltitude, windSpeedAvg));
+                                double maxAltitude = Double.parseDouble(parts[3].trim());
+                                double windSpeedAvg = Double.parseDouble(parts[4].trim());
+
+                                habitats.add(new Aerial(ubication, name, maxAltitude, windSpeedAvg));
                             } catch (Exception e) {
                                 System.out.println("Error creating the object: " + e.getMessage());
                             }
                         }
                         case "Marine" -> {
                             try {
-                                double waterTemperature = Double.parseDouble(parts[4].trim());
-                                double salinityLevel = Double.parseDouble(parts[5].trim());
-                                for(Dinosaur d: dinosaurs){
-                                    if(habitatId.equals(d.getId())){
-                                        dinosInHabitat.add(d);
-                                        
-                                    }
-                                }
-                                habitats.add(new Marine(habitatId, ubication, name,dinosInHabitat, waterTemperature, salinityLevel));
+                                double waterTemperature = Double.parseDouble(parts[3].trim());
+                                double salinityLevel = Double.parseDouble(parts[4].trim());
+
+                                habitats.add(new Marine(ubication, name, waterTemperature, salinityLevel));
                             } catch (Exception e) {
                                 System.out.println("Error creating the object: " + e.getMessage());
                             }
                         }
-                        case "Terrestrial" -> {
+                        case "TerrestriaL" -> {
                             try {
-                                
-                                String soilType = parts[4].trim();
-                                double averageHumidity = Double.parseDouble(parts[5].trim());
-                                for(Dinosaur d: dinosaurs){
-                                    if(habitatId.equals(d.getId())){
-                                        dinosInHabitat.add(d);
-                                        
-                                    }
-                                }
+                                String soilType = parts[3].trim();
+                                double averageHumidity = Double.parseDouble(parts[4].trim());
 
-                                habitats.add(new Terrestrial(habitatId, ubication, name,dinosInHabitat, soilType, averageHumidity));
+                                habitats.add(new Terrestrial(ubication, name, soilType, averageHumidity));
                             } catch (Exception e) {
                                 System.out.println("Error creating the object: " + e.getMessage());
                             }
@@ -220,9 +199,10 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
     public static void main(String[] args) {
         ArrayList<Dinosaur> dinosaurs;
         ArrayList<Habitat> habitats;
-        System.out.println("Creating the list of Authors");
+        System.out.println("Creating the list");
         dinosaurs = readDinosaurs("./Listadinosaur.txt");
-        habitats = readHabitats("./ListaHabitats.txt", dinosaurs);
+        habitats = readHabitats("./listahabitats2.txt", dinosaurs);
+        agregacion(dinosaurs, habitats);
         for (Habitat h : habitats) {
             System.out.println(h.toString());
         }

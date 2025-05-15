@@ -11,8 +11,8 @@ public class Marine extends Habitat{
         this.waterTemperature = 0;
         this.salinityLevel = 0;
     }
-    public Marine(String habitatId, String ubication, String name,ArrayList<Dinosaur> dinosInHabitat, double waterTemperature, double salinityLevel){
-        super(habitatId, ubication, name, dinosInHabitat);
+    public Marine(String ubication, String name, double waterTemperature, double salinityLevel){
+        super(ubication, name);
         this.setWaterTemperature(waterTemperature);
         this.setSalinityLevel(salinityLevel);
     }

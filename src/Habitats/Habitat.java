@@ -13,9 +13,7 @@ public abstract class Habitat {
         this.ubication = null;
         this.name = null;
     }
-    public Habitat(String habitatId, String ubication, String name, ArrayList dinosInHabitat){
-        this.dinosInHabitat = dinosInHabitat;
-        this.sethabitatId(habitatId);
+    public Habitat( String ubication, String name){
         this.setUbication(ubication);
         this.setName(name);
     }
