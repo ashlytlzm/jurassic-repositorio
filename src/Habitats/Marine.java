@@ -1,6 +1,7 @@
 
 package Habitats;
 import Dinosaurs.*;
+import java.util.ArrayList;
 
 public class Marine extends Habitat{
     private double waterTemperature;
@@ -10,8 +11,8 @@ public class Marine extends Habitat{
         this.waterTemperature = 0;
         this.salinityLevel = 0;
     }
-    public Marine(String ubication, String name, double waterTemperature, double salinityLevel){
-        super(ubication, name);
+    public Marine(String habitatId, String ubication, String name,ArrayList<Dinosaur> dinosInHabitat, double waterTemperature, double salinityLevel){
+        super(habitatId, ubication, name, dinosInHabitat);
         this.setWaterTemperature(waterTemperature);
         this.setSalinityLevel(salinityLevel);
     }

@@ -1,0 +1,6 @@
+01,Aerial,North Mountain,Cloud Peak,3000.0,12.5
+02,Marine,Pacific Ocean,Deep Blue,15.0,3.5 
+03,Terrestrial,Savannah,Golden Plains,Sandy,65.0
+04,Aerial,Rocky Heights,Eagle Nest,2500.0,20.0
+05,Marine,Atlantic Ocean,Coral Reef,22.0,3.8
+06,Terrestrial,Amazon Forest,Green Jungle,Loamy,85.0

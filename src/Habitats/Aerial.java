@@ -1,6 +1,7 @@
 
 package Habitats;
 import Dinosaurs.*;
+import java.util.ArrayList;
 
 public class Aerial extends Habitat{
     private double maxAltitude;
@@ -10,8 +11,8 @@ public class Aerial extends Habitat{
         this.maxAltitude = 0;
         this.windSpeedAvg = 0;
     }
-    public Aerial(String ubication, String name, double maxAltitude, double windSpeedAvg){
-        super(ubication,name);
+    public Aerial(String habitatId, String ubication, String name,ArrayList<Dinosaur> dinosInHabitat, double maxAltitude, double windSpeedAvg){
+        super(habitatId, ubication,name, dinosInHabitat);
         this.setMaxAltitude(maxAltitude);
         this.setWindSpeedAvg(windSpeedAvg);
     }

@@ -44,7 +44,7 @@ public abstract class Dinosaur {
         }
     }
     public void setAge(int age){
-        if(age< 1 || age < 250){
+        if(age< 1 || age > 250){
             throw new IllegalArgumentException("The Age is not valid.");
         }else{
             this.age = age;
