@@ -91,7 +91,7 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
                     }
 
                 } else {
-                    System.out.println("No hay suficientes datos para crear el objeto");
+                    System.out.println("Not enough data to create the object...");
                 }
             }
             reader.close();
@@ -183,7 +183,7 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
                         }
                     }
                 } else {
-                    System.out.println("No hay suficientes datos para crear el objeto");
+                    System.out.println("Not enough data to create the object...");
                 }
             }
             reader.close();
@@ -225,7 +225,7 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
     public static void main(String[] args) {
         ArrayList<Dinosaur> dinosaurs;
         ArrayList<Habitat> habitats;
-        System.out.println("Creating the list of Authors");
+        System.out.println("Creating the list...");
         dinosaurs = readDinosaurs("./Listadinosaur.txt");
         habitats = readHabitats("./ListaHabitats.txt", dinosaurs);
         for (Habitat h : habitats) {

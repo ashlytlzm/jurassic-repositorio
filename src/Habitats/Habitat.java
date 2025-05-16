@@ -60,8 +60,8 @@ public abstract class Habitat {
         String str = "\nUbication: " + this.getUbication() + "\nName: " + this.getName() + "\nDinos in habitats: ";
         for (Dinosaur d : dinosInHabitat) {
             String namedino = d.getName();
-            String dinoclass = d.getClass().getName();
-             str+= namedino + ", " + dinoclass;
+            String dinoclass = d.getClass().getSimpleName();
+             str+= dinoclass + ": " + namedino + " ";
         }
         return str;
     }
