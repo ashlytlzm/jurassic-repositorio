@@ -107,7 +107,7 @@ public void setVetId(String vetId){
     
     @Override
     public String toString(){
-        String str = "\nId: " + this.getId() +"\nName: " + this.getName() + "\nAge: " + this.getAge() + "\nWeigth: " + this.getWeigth() + "kg";
+        String str = "\n<<DINOSAUR>> \nId: " + this.getId() +"\nName: " + this.getName() + "\nAge: " + this.getAge() + "\nWeigth: " + this.getWeigth() + "kg";
         return str;
     }
 }

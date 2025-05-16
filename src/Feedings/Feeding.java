@@ -57,7 +57,7 @@ public class Feeding {
     
     @Override
     public String toString(){
-        String str = "\nType of food: " + this.getTypeOfFood() + "\nAmount Per Meal: " +
+        String str = "\nFEEDING: \nType of food: " + this.getTypeOfFood() + "\nAmount Per Meal: " +
                  this.getAmountPerMeal() + "\nFrecuency: " + this.getFrecuency();
         return str;
     }
