@@ -98,6 +98,10 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
         }
+        for(Dinosaur d: dinosaurs){
+            d.addFeeding();
+            
+        }
         return dinosaurs;
 
     }
@@ -229,6 +233,7 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
         System.out.println("");
         for(Dinosaur d: dinosaurs){
             System.out.println(d.toString());
+            System.out.println(d.getFeeding().toString());
         }  
         System.out.println("");
         

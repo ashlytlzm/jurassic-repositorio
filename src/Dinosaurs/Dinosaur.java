@@ -101,6 +101,9 @@ public void setVetId(String vetId){
     public void addFeeding(){
         this.feeding = new Feeding(this.typeOfFood,this.amountPerMeal,this.frecuency);
     }
+    public Feeding getFeeding(){
+        return this.feeding;
+    }
     
     @Override
     public String toString(){

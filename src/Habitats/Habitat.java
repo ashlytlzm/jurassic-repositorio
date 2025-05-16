@@ -48,6 +48,9 @@ public abstract class Habitat {
         return this.name;
     }
     
+    public String getHabitatId(){
+        return this.habitatId;
+    }
     public void addDino(Dinosaur dino){
         this.dinosInHabitat.add(dino);
     }

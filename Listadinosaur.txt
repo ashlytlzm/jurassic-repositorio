@@ -1,7 +1,7 @@
-Branchiosaurus,06,01,01,Bruno,12,800.5,Herbívoro,250,3,3.2,250.0
-Mosasaurus,02,02,02,Marina,15,1200.0,Carnívoro,300,5,300.5,"Aggressive"
-Pterodactylus,01,03,03,Volador,8,30.7,Carnívoro,120,4,5.5,120.0
-Velociraptor,03,04,04,RaptorX,5,75.3,Carnívoro,65,2,9,65.4
+Branchiosaurus,06,01,01,Bruno,12,800.5,Herbivoro,250,3,3.2,250.0
+Mosasaurus,02,02,02,Marina,15,1200.0,Carnivoro,300,5,300.5,"Aggressive"
+Pterodactylus,01,03,03,Volador,8,30.7,Carnivoro,120,4,5.5,120.0
+Velociraptor,03,04,04,RaptorX,5,75.3,Carnivoro,65,2,9,65.4
 
 
  
