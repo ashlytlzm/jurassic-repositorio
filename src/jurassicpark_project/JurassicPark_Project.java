@@ -143,7 +143,7 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
                                 System.out.println("Error creating the object: " + e.getMessage());
                             }
                         }
-                        case "TerrestriaL" -> {
+                        case "Terrestrial" -> {
                             try {
                                 String soilType = parts[3].trim();
                                 double averageHumidity = Double.parseDouble(parts[4].trim());
@@ -164,8 +164,10 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
         } catch (IOException e) {
             System.err.println("Error reading file: " + e.getMessage());
         }
+        
         return habitats;
-
+        
+        
     }
     
     public static void agregacion(ArrayList<Dinosaur> dinosaurs, ArrayList<Habitat> habitats) {
@@ -199,7 +201,9 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
     public static void main(String[] args) {
         ArrayList<Dinosaur> dinosaurs;
         ArrayList<Habitat> habitats;
-        System.out.println("Creating the list");
+
+        System.out.println("Creating the list ");
+
         dinosaurs = readDinosaurs("./Listadinosaur.txt");
         habitats = readHabitats("./listahabitats2.txt", dinosaurs);
         agregacion(dinosaurs, habitats);
