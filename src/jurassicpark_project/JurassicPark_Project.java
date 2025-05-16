@@ -116,12 +116,13 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
         String name = "";
         String habitatId = "";
         Dinosaur tempDino = null;
-        ArrayList<Dinosaur> dinosInHabitat = new ArrayList<>();
+        
 
         try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
 
             while ((line = reader.readLine()) != null) {
                 String[] parts = line.split(",");
+                ArrayList<Dinosaur> dinosInHabitat = new ArrayList<>();
 
                 if (parts.length >= 6) {
                     

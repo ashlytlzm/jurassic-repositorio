@@ -43,7 +43,7 @@ public class Aerial extends Habitat{
    
     @Override
     public String toString(){
-        String str = super.toString() + "\nMax Altitude: " + this.getMaxAltitude() + "m" +
+        String str = super.toString() + "\nMax Altitude: " + this.getMaxAltitude() + "m" + 
                 "\nWind Speed Average: " + this.getWindSpeedAvg() + "m/s";
         return str;
     }
