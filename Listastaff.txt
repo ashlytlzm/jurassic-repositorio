@@ -1,0 +1,4 @@
+Trainer,Alan Grant,45,04,15,Raptor behavior specialist
+Trainer,Sarah Harding,38,03,30,Branchiosaurus
+Veterinarian,Laura Sorkin,50,02,Dino medicine expert
+Shopkeeper,Bob Barnes,29,01,450,12.5

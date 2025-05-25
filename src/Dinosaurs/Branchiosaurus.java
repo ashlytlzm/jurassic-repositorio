@@ -24,8 +24,8 @@ public class Branchiosaurus extends Dinosaur{
         }
     }
     public void setDailyWaterIntake(double dailyWaterIntake){
-        if(dailyWaterIntake < 1 || dailyWaterIntake > 150){
-            throw new IllegalArgumentException("The Daily Food Intake is not valid.");
+        if(dailyWaterIntake < 1 || dailyWaterIntake > 300){
+            throw new IllegalArgumentException("The Daily Water Intake is not valid.");
         }else{
             this.dailyWaterIntake = dailyWaterIntake;
         }

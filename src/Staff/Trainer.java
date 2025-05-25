@@ -55,14 +55,19 @@ public class Trainer  extends Person implements DinoStaffFunctions{
             case "Mosasaurus" -> salary += 1500;
             case "Pterodactylus" -> salary +=2000;
             case "Velociraptor" -> salary +=1000;
-            default -> salary += 0;
+            default -> salary += 500;
         }
         return salary;
     }
     
     @Override
     public String toString(){
-        String str = super.toString() + "\nExperienceYears: " + this.getExperienceYears() + "\nSpeciality: " + this.getSpeciality(); 
+        String str = super.toString() + "\nExperienceYears: " + this.getExperienceYears() + "\nSpeciality: " + this.getSpeciality() + "\nSalary" + this.getSalary() + "\nDinosaurs in charge"; 
+        for(Dinosaur d: dinosToTrain){
+            String dinoClass = d.getClass().getSimpleName();
+            String dinoName = d.getName();
+           str+= dinoClass + ": " + dinoName + " ";
+        }
         return str;
     }
 }

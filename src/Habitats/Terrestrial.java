@@ -1,6 +1,7 @@
 
 package Habitats;
 import Dinosaurs.*;
+import java.util.ArrayList;
 
 public class Terrestrial extends Habitat{
     private String soilType;
@@ -10,8 +11,8 @@ public class Terrestrial extends Habitat{
         this.soilType = null;
         this.averageHumidity = 0;
     }
-    public Terrestrial(String ubication, String name, String soilType, double averageHumidity){
-        super(ubication,name);
+    public Terrestrial(String habitatId, String ubication, String name,ArrayList<Dinosaur> dinosInHabitat, String soilType, double averageHumidity){
+        super(habitatId, ubication,name, dinosInHabitat);
         this.setSoilType(soilType);
         this.setAverageHumidity(averageHumidity);
     }
