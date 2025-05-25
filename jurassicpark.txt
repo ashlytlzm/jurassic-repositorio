@@ -1,0 +1,157 @@
+<<LIST OF HABITATS>>
+Habitat: Aerial
+Ubication: North Mountain
+Name: Cloud Peak
+Dinos in habitats:
+Pterodactylus: FlyStan
+Max Altitude: 3000.0m
+Wind Speed Average: 12.5m/s
+
+Habitat: Marine
+Ubication: Pacific Ocean
+Name: Deep Blue
+Dinos in habitats:
+Mosasaurus: WaterMarine
+Water Temperature: 15.0
+Salinity Level: 3.5%
+
+Habitat: Terrestrial
+Ubication: Savannah
+Name: Golden Plains
+Dinos in habitats:
+Velociraptor: RaptorX
+Velociraptor: Raptor2
+Soil Type: Sandy
+Average Humidity: 65.0
+
+Habitat: Aerial
+Ubication: Rocky Heights
+Name: Eagle Nest
+Dinos in habitats:
+Max Altitude: 2500.0m
+Wind Speed Average: 20.0m/s
+
+Habitat: Marine
+Ubication: Atlantic Ocean
+Name: Coral Reef
+Dinos in habitats:
+Water Temperature: 22.0
+Salinity Level: 3.8%
+
+Habitat: Terrestrial
+Ubication: Amazon Forest
+Name: Green Jungle
+Dinos in habitats:
+Branchiosaurus: Bruno
+Soil Type: Loamy
+Average Humidity: 85.0
+
+<<LIST OF DINOSAURS>>
+Dinosaur: Branchiosaurus
+Id: 06
+Name: Bruno
+Age: 12
+Weigth: 800.5kg
+Neck Length: 3.2cm
+Daily Food Intake: 250.0L
+FEEDING: 
+Type of food: Herbivorus
+Amount Per Meal: 250
+Frecuency: 3
+
+Dinosaur: Mosasaurus
+Id: 02
+Name: WaterMarine
+Age: 15
+Weigth: 1200.0kg
+SwimDepth: 300.5m
+Behavior: "Aggressive"
+FEEDING: 
+Type of food: Carnivorous
+Amount Per Meal: 300
+Frecuency: 5
+
+Dinosaur: Pterodactylus
+Id: 01
+Name: FlyStan
+Age: 8
+Weigth: 30.7kg
+Wingspan: 5.5cm
+Flight Range: 120.0Km
+FEEDING: 
+Type of food: Carnivorous
+Amount Per Meal: 120
+Frecuency: 4
+
+Dinosaur: Velociraptor
+Id: 03
+Name: RaptorX
+Age: 5
+Weigth: 75.3kg
+Agility Level: 9
+Speed: 65.4Km/h
+FEEDING: 
+Type of food: Carnivorous
+Amount Per Meal: 65
+Frecuency: 2
+
+Dinosaur: Velociraptor
+Id: 03
+Name: Raptor2
+Age: 5
+Weigth: 75.3kg
+Agility Level: 9
+Speed: 65.4Km/h
+FEEDING: 
+Type of food: Carnivorous
+Amount Per Meal: 65
+Frecuency: 2
+
+<<LIST OF STAFF>>
+Staff: Trainer
+Name: Alan Grant
+Age: 45
+Id: 04
+ExperienceYears: 15
+Speciality: Raptor behavior specialist
+Salary: 5600.0
+Dinosaurs in charge:
+Mosasaurus: WaterMarine
+Velociraptor: Raptor2
+Branchiosaurus: Bruno
+Pterodactylus: FlyStan
+
+
+Staff: Trainer
+Name: Sarah Harding
+Age: 38
+Id: 03
+ExperienceYears: 30
+Speciality: Branchiosaurus
+Salary: 16100.0
+Dinosaurs in charge:
+Branchiosaurus: Bruno
+Pterodactylus: FlyStan
+
+
+Staff: Veterinarian
+Name: Laura Sorkin
+Age: 50
+Id: 02
+Specialization: Dino medicine expert
+Salary: 2300.0
+Dinossaurs to care:
+Branchiosaurus: Bruno
+Mosasaurus: WaterMarine
+Pterodactylus: FlyStan
+Velociraptor: RaptorX
+Velociraptor: Raptor2
+
+
+Staff: Shopkeeper
+Name: Bob Barnes
+Age: 29
+Id: 01
+Salary: 2050.0
+Inventory Managed: 450
+WorkOvertime: 12.5 hours
