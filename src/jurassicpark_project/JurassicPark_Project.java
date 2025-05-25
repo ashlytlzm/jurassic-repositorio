@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-
+import java.util.Arrays;
 
 public class JurassicPark_Project {
 
@@ -221,13 +221,103 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
 
         }
     }
+    
+    public static ArrayList<Person> readStaff(String filePath, ArrayList<Dinosaur> dinosaurs){
+        ArrayList<Person> staff = new ArrayList<>();
+        String line = "";
+        String typePerson = "";
+        String name = "";
+        int age = 0;
+        String staffId = "";
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                ArrayList<Dinosaur> dinosToTrain = new ArrayList<>();
+                ArrayList<Dinosaur> dinosToCare = new ArrayList<>();
+                ArrayList<Dinosaur> dinoVisits = new ArrayList<>();
+
+                if (parts.length >= 5) {
+                    typePerson = parts[0].trim();
+                    name = parts[1].trim();
+                    age = Integer.parseInt(parts[2].trim());
+                    staffId = parts[3].trim();
+
+                    switch (typePerson) {
+                        case "Veterinarian" -> {
+                            try {
+                                String specialization = parts[4].trim();
+                                staff.add(new Veterinarian(name, age, staffId, specialization));
+                                for (Dinosaur d : dinosaurs) {
+                                    if (staffId.equals(d.getVetId())) {
+                                        for (Person p : staff) {
+                                            if (p instanceof Veterinarian) {
+                                                ((Veterinarian) p).addDino(d);
+                                            }
+                                        }
+                                    }
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Error creating the object: " + e.getMessage());
+                            }
+
+                        }
+                        case "Trainer" -> {
+                            try {
+                                int experienceYears = Integer.parseInt(parts[4].trim());
+                                String speciality = parts[5].trim();
+                                staff.add(new Trainer(name, age, staffId, experienceYears, speciality));
+                                for (Dinosaur d : dinosaurs) {
+                                    if (staffId.equals(d.getTrainerId())) {
+                                        for (Person p : staff) {
+                                            if (p instanceof Trainer) {
+                                                ((Trainer) p).addDino(d);
+                                            }
+                                        }
+                                    }
+                                }
+                            } catch (Exception e) {
+                                System.out.println("Error creating the object: " + e.getMessage());
+                            }
+
+                        }
+                        case "Shopkeeper" -> {
+                            try {
+                                int inventoryManaged = Integer.parseInt(parts[4].trim());
+                                double workOvertime = Double.parseDouble(parts[5].trim());
+                                staff.add(new Shopkeeper(name, age, staffId, inventoryManaged, workOvertime));
+                            } catch (Exception e) {
+                                System.out.println("Error creating the object: " + e.getMessage());
+                            }
+
+                        }
+                        default -> {
+                        }
+
+                    }
+                    
+                }
+                else{
+                    System.out.println("Not enough data to create the object..." + Arrays.toString(parts));    
+                        }
+                
+            }
+            reader.close();
+        } catch(IOException e){
+            System.err.println("Error reading file: " + e.getMessage());
+        }
+        return staff;
+        
+    }
 
     public static void main(String[] args) {
         ArrayList<Dinosaur> dinosaurs;
         ArrayList<Habitat> habitats;
+        ArrayList<Person> staff;
         System.out.println("Creating the list...");
         dinosaurs = readDinosaurs("./Listadinosaur.txt");
         habitats = readHabitats("./ListaHabitats.txt", dinosaurs);
+        staff = readStaff("./Listastaff.txt", dinosaurs);
         for (Habitat h : habitats) {
             System.out.println(h.toString());
         }
@@ -237,6 +327,9 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
             System.out.println(d.getFeeding().toString());
         }  
         System.out.println("");
+        for(Person p: staff){
+            System.out.println(p.toString());
+        }
         
         
         

@@ -8,8 +8,9 @@ import java.util.ArrayList;
 public class Veterinarian extends Person implements DinoStaffFunctions{
     
     private String specialization;
-    protected ArrayList <Dinosaur> dinosToCare = new ArrayList<>();
-    protected ArrayList <Dinosaur> dinoVisits = new ArrayList <>();
+    private double salary;
+    protected ArrayList <Dinosaur> dinosToCare = new ArrayList<>(); //lista de dinosaurios a cuidar
+    protected ArrayList <Dinosaur> dinoVisits = new ArrayList <>(); //lista de dinosaurios a cuidart
     
     public Veterinarian(){
         this.specialization = null;
@@ -52,12 +53,18 @@ public class Veterinarian extends Person implements DinoStaffFunctions{
             case "Animal Anesthesiology" -> salary +=1000000;
             default -> salary += 0;
         }
+        this.salary = salary;
         return salary;
         
     }
     @Override
     public String toString(){
-        String str = super.toString() + "\nSpecialization: " + this.getSpecialization();
+        String str = super.toString() + "\nSpecialization: " + this.getSpecialization() + "\nSalary: " + this.getSalary();
+        for(Dinosaur d: dinosToCare){
+            String dinoClass = d.getClass().getSimpleName();
+            String dinoName = d.getName();
+           str+= dinoClass + ": " + dinoName + " ";
+        }
          return str;
     }
 }
