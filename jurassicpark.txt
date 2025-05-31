@@ -42,14 +42,14 @@ Habitat: Terrestrial
 Ubication: Amazon Forest
 Name: Green Jungle
 Dinos in habitats:
-Branchiosaurus: Bruno
+Branchiosaurus: juan
 Soil Type: Loamy
 Average Humidity: 85.0
 
 <<LIST OF DINOSAURS>>
 Dinosaur: Branchiosaurus
 Id: 06
-Name: Bruno
+Name: juan
 Age: 12
 Weigth: 800.5kg
 Neck Length: 3.2cm
@@ -118,7 +118,7 @@ Salary: 5600.0
 Dinosaurs in charge:
 Mosasaurus: WaterMarine
 Velociraptor: Raptor2
-Branchiosaurus: Bruno
+Branchiosaurus: juan
 Pterodactylus: FlyStan
 
 
@@ -130,7 +130,7 @@ ExperienceYears: 30
 Speciality: Branchiosaurus
 Salary: 16100.0
 Dinosaurs in charge:
-Branchiosaurus: Bruno
+Branchiosaurus: juan
 Pterodactylus: FlyStan
 
 
@@ -141,7 +141,7 @@ Id: 02
 Specialization: Dino medicine expert
 Salary: 2300.0
 Dinossaurs to care:
-Branchiosaurus: Bruno
+Branchiosaurus: juan
 Mosasaurus: WaterMarine
 Pterodactylus: FlyStan
 Velociraptor: RaptorX

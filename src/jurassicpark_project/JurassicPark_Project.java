@@ -3,7 +3,6 @@ package jurassicpark_project;
 import Dinosaurs.*;
 import Staff.*;
 import Habitats.*;
-import Feedings.*;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -11,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class JurassicPark_Project {
 
@@ -334,7 +334,7 @@ public static void writeFile(ArrayList<Habitat> habitats, ArrayList<Dinosaur> di
             w.newLine();
         }
         w.close();
-        System.out.println("File created successfully");
+        System.out.println("File: " + filePath + " created successfully");
           
     }catch(IOException ioe){
         System.out.println("Error writing file");
@@ -345,14 +345,38 @@ public static void writeFile(ArrayList<Habitat> habitats, ArrayList<Dinosaur> di
         ArrayList<Dinosaur> dinosaurs;
         ArrayList<Habitat> habitats;
         ArrayList<Person> staff;
-        System.out.println("Creating the list...");
         dinosaurs = readDinosaurs("./Listadinosaur.txt");
         habitats = readHabitats("./ListaHabitats.txt", dinosaurs);
         staff = readStaff("./Listastaff.txt", dinosaurs);
+        System.out.println("Creating the lists...");
+        
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Insert the ID of the Dinosaur you want to search: ");
+        String idSearch = scanner.nextLine();
+
+        boolean found = false;
+        for (Dinosaur d : dinosaurs) {
+            if (d.getId().equals(idSearch)) {
+                System.out.print("ID found, insert the new name of the Dinosaur " + idSearch + ": ");
+                String newName = scanner.nextLine();
+                d.setName(newName);
+                System.out.println("_______________________");
+                System.out.println("New Dinosaur data: " + d);
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Dinosaur with the ID: " + idSearch + " not found...");
+        }
+
+        scanner.close();
+        System.out.println("______________________________");
+        System.out.println("Updating the Dinosaurs list...");
+        System.out.println("Creating the file...");
         writeFile(habitats, dinosaurs,staff);
-        
-        
-        
+          
  }
 }
 
