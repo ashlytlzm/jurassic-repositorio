@@ -351,6 +351,14 @@ public static void writeFile(ArrayList<Habitat> habitats, ArrayList<Dinosaur> di
         System.out.println("Creating the lists...");
         
         Scanner scanner = new Scanner(System.in);
+        System.out.println("You want to change the name of a Dinosaur?: y/n");
+        String option = scanner.nextLine();
+        
+        if(option.equals("no")){
+            System.out.println("Creating the file...");
+        }
+        else if(option.equals("yes")){
+            
         System.out.print("Insert the ID of the Dinosaur you want to search: ");
         String idSearch = scanner.nextLine();
 
@@ -371,49 +379,16 @@ public static void writeFile(ArrayList<Habitat> habitats, ArrayList<Dinosaur> di
             System.out.println("Dinosaur with the ID: " + idSearch + " not found...");
         }
 
-        scanner.close();
         System.out.println("______________________________");
         System.out.println("Updating the Dinosaurs list...");
-        System.out.println("Creating the file...");
+        System.out.println("Creating the file..."); 
+        
+        }else{
+            System.out.println("Not a valid answer");
+            System.out.println("Creating the file anyways...");
+        }
+        scanner.close();
         writeFile(habitats, dinosaurs,staff);
           
  }
 }
-
-        /*for(Dinosaur a: dinosaurs){
-            for(Person b: staff){
-             if((a.getVetId()).matches(b.getId())){
-                 ((Veterinarian) b).addDino(a);
-             }
-             if((a.getTrainerId()).matches(b.getId())){
-                 ((Trainer) b).addDino(a);
-             }
-            }   
-        }
-        for(Dinosaur a: dinosaurs){
-            for(Habitat b : habitats){
-                if(a instanceof Velociraptor){
-                    if(b instanceof Terrestrial){
-                        ((Terrestrial)b).addDino(a);
-                    }
-                }
-                if(a instanceof Mosasaurus){
-                    if(b instanceof Marine){
-                        ((Marine)b).addDino(a);
-                    }
-                }
-                if(a instanceof Pterodactylus){
-                    if(b instanceof Aerial){
-                        ((Aerial)b).addDino(a);
-                    }
-                }
-                if(a instanceof Branchiosaurus){
-                    if(b instanceof Terrestrial){
-                        ((Terrestrial)b).addDino(a);
-                    }
-                }
-            }
-        }
-    }
-    
-}*/
