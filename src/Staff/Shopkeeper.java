@@ -45,7 +45,7 @@ public class Shopkeeper extends Person{
     
     @Override
     public String toString(){
-        String str = super.toString() +"\nSalary: " + this.getSalary() + "\nInventory Managed: " + this.getInventoryManaged() + "\nWorkOvertime: " + this.getWorkOvertime() + " hours";
+        String str = super.toString() +"\nSalary: " + this.getSalary() + "\nInventory Managed: " + this.getInventoryManaged() + "\nWork Overtime: " + this.getWorkOvertime() + " hours";
         return str;
     }
 }
