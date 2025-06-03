@@ -351,7 +351,7 @@ public static void writeFile(ArrayList<Habitat> habitats, ArrayList<Dinosaur> di
         System.out.println("Creating the lists...");
         
         Scanner scanner = new Scanner(System.in);
-        System.out.println("You want to change the name of a Dinosaur?: y/n");
+        System.out.println("Do you want to change the name of a Dinosaur?: y/n");
         String option = scanner.nextLine();
         
         if(option.equals("no")){
