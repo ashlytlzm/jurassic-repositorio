@@ -422,15 +422,17 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
             String name = scanner.nextLine();
             System.out.print("\nEnter the age of the Trainer: ");
             int age = scanner.nextInt();
+            scanner.nextLine();
             System.out.print("\nEnter the ID of the Trainer: ");
             String id = scanner.nextLine();
-            scanner.nextLine();
             System.out.print("\nEnter the years of experience of the Trainer: ");
             int experienceYears = scanner.nextInt();
+            scanner.nextLine();
             System.out.print("\nEnter the speciality of the Trainer: ");
             String speciality = scanner.nextLine();
             Trainer intern1 = new Trainer(name,age,id,experienceYears,speciality);
             staff.add(intern1);
+            System.out.println("Trainer added: " + intern1.getName());
         }catch(IllegalArgumentException e){
             System.out.println("Error: " + e.getMessage());
         }catch(Exception e){
@@ -446,13 +448,14 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
             String name = scanner.nextLine();
             System.out.print("\nEnter the age of the Veterinarian: ");
             int age = scanner.nextInt();
+            scanner.nextLine();
             System.out.print("\nEnter the id of the Veterinarian: ");
             String id = scanner.nextLine();
-            scanner.nextLine();
             System.out.print("\nEnter the specialization of the Veterinarian: ");
             String specialization = scanner.nextLine();
             Veterinarian intern2 = new Veterinarian(name,age,id,specialization);
             staff.add(intern2);
+            System.out.println("Veterinarian added: " + intern2.getName());
         }catch(IllegalArgumentException e){
             System.out.println("Error: " + e.getMessage());
         }catch(Exception e){
