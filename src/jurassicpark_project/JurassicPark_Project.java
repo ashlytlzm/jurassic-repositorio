@@ -3,12 +3,14 @@ package jurassicpark_project;
 import Dinosaurs.*;
 import Staff.*;
 import Habitats.*;
-import Feedings.*;
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class JurassicPark_Project {
 
@@ -194,33 +196,7 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
 
     }
     
-    public static void agregacion(ArrayList<Dinosaur> dinosaurs, ArrayList<Habitat> habitats) {
-        for (Dinosaur a : dinosaurs) {
-            for (Habitat b : habitats) {
-                if (a instanceof Velociraptor) {
-                    if (b instanceof Terrestrial) {
-                        ((Terrestrial) b).addDino(a);
-                    }
-                }
-                if (a instanceof Mosasaurus) {
-                    if (b instanceof Marine) {
-                        ((Marine) b).addDino(a);
-                    }
-                }
-                if (a instanceof Pterodactylus) {
-                    if (b instanceof Aerial) {
-                        ((Aerial) b).addDino(a);
-                    }
-                }
-                if (a instanceof Branchiosaurus) {
-                    if (b instanceof Terrestrial) {
-                        ((Terrestrial) b).addDino(a);
-                    }
-                }
-            }
-
-        }
-    }
+    
     
     public static ArrayList<Person> readStaff(String filePath, ArrayList<Dinosaur> dinosaurs){
         ArrayList<Person> staff = new ArrayList<>();
@@ -308,69 +284,146 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
         }
         return staff;
         
+   
     }
+    public static void writeFile(ArrayList<Habitat> habitats, ArrayList<Dinosaur> dinosaurs, ArrayList<Person> staff){
+        String filePath = "jurassicpark.txt";
+        try(BufferedWriter w = new BufferedWriter(new FileWriter(filePath))){
+            w.write("<<LIST OF HABITATS>>");
+           for (Habitat h : habitats) {
+                w.write(h.toString());
+                w.newLine();
+            }
+           w.newLine();
+           w.write("<<LIST OF DINOSAURS>>");
+            for(Dinosaur d: dinosaurs){
+                w.write(d.toString());
+                w.write(d.getFeeding().toString());
+                w.newLine();
+            } 
+            w.newLine();
+            w.write("<<LIST OF STAFF>>");
+            for(Person p: staff){
+                w.write(p.toString());
+                w.newLine();
+            }
+            w.close();
+            System.out.println("File: " + filePath + " created successfully");
 
+        }catch(IOException ioe){
+            System.out.println("Error writing file");
+            ioe.printStackTrace();
+        }
+    }
+    
+    public static void modifyDinoName(ArrayList<Dinosaur> dinosaurs){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Insert the ID of the Dinosaur you want to search: ");
+        String idSearch = scanner.nextLine();
+
+        boolean found = false;
+        for (Dinosaur d : dinosaurs) {
+            if (d.getId().equals(idSearch)) {
+                System.out.print("ID found, insert the new name of the Dinosaur " + idSearch + ": ");
+                String newName = scanner.nextLine();
+                d.setName(newName);
+                System.out.println("_______________________");
+                System.out.println("New Dinosaur data: " + d.toString());
+                found = true;
+                break;
+            }
+        }
+        if(found != true){
+            System.out.println("Dinosaur with the ID: " + idSearch + " not found...");
+        }
+    }
+    
+    public static void createTrainer(ArrayList<Person> staff){
+        Scanner scanner = new Scanner(System.in);
+        try{
+            System.out.print("\nEnter the name of the Trainer: ");
+            String name = scanner.nextLine();
+            System.out.print("\nEnter the age of the Trainer: ");
+            int age = scanner.nextInt();
+            System.out.print("\nEnter the id of the Trainer: ");
+            String id = scanner.nextLine();
+            System.out.print("\nEnter the experienceYears of the Trainer: ");
+            int experienceYears = scanner.nextInt();
+            System.out.print("\nEnter the speciality of the Trainer: ");
+            String speciality = scanner.nextLine();
+            Trainer intern1 = new Trainer(name,age,id,experienceYears,speciality);
+            staff.add(intern1);
+        }catch(IllegalArgumentException e){
+            System.out.println("Error: " + e.getMessage());
+        }catch(Exception e){
+            System.out.println("Error: Some parameter was entered incorrectly. "
+                    + "The object could not be created, there were errors in the entered data.");
+        }
+    }
+    
+    public static void createVeterinarian(ArrayList<Person> staff){
+        Scanner scanner = new Scanner(System.in);
+        try{
+            System.out.print("\nEnter the name of the Trainer: ");
+            String name = scanner.nextLine();
+            System.out.print("\nEnter the age of the Trainer: ");
+            int age = scanner.nextInt();
+            System.out.print("\nEnter the id of the Trainer: ");
+            String id = scanner.nextLine();
+            System.out.print("\nEnter the specialization of the Trainer: ");
+            String specialization = scanner.nextLine();
+            Veterinarian intern2 = new Veterinarian(name,age,id,specialization);
+            staff.add(intern2);
+        }catch(IllegalArgumentException e){
+            System.out.println("Error: " + e.getMessage());
+        }catch(Exception e){
+            System.out.println("Error: Some parameter was entered incorrectly. "
+                    + "The object could not be created, there were errors in the entered data.");
+        }
+    }
+    
     public static void main(String[] args) {
         ArrayList<Dinosaur> dinosaurs;
         ArrayList<Habitat> habitats;
         ArrayList<Person> staff;
-        System.out.println("Creating the list...");
+        Scanner scanner = new Scanner(System.in);
         dinosaurs = readDinosaurs("./Listadinosaur.txt");
         habitats = readHabitats("./ListaHabitats.txt", dinosaurs);
         staff = readStaff("./Listastaff.txt", dinosaurs);
-        for (Habitat h : habitats) {
-            System.out.println(h.toString());
-        }
-        System.out.println("");
-        for(Dinosaur d: dinosaurs){
-            System.out.println(d.toString());
-            System.out.println(d.getFeeding().toString());
-        }  
-        System.out.println("");
-        for(Person p: staff){
-            System.out.println(p.toString());
-        }
-        
-        
-        
-        
-}
-}
-
-        /*for(Dinosaur a: dinosaurs){
-            for(Person b: staff){
-             if((a.getVetId()).matches(b.getId())){
-                 ((Veterinarian) b).addDino(a);
-             }
-             if((a.getTrainerId()).matches(b.getId())){
-                 ((Trainer) b).addDino(a);
-             }
-            }   
-        }
-        for(Dinosaur a: dinosaurs){
-            for(Habitat b : habitats){
-                if(a instanceof Velociraptor){
-                    if(b instanceof Terrestrial){
-                        ((Terrestrial)b).addDino(a);
-                    }
-                }
-                if(a instanceof Mosasaurus){
-                    if(b instanceof Marine){
-                        ((Marine)b).addDino(a);
-                    }
-                }
-                if(a instanceof Pterodactylus){
-                    if(b instanceof Aerial){
-                        ((Aerial)b).addDino(a);
-                    }
-                }
-                if(a instanceof Branchiosaurus){
-                    if(b instanceof Terrestrial){
-                        ((Terrestrial)b).addDino(a);
-                    }
+        System.out.println("Creating the lists...");
+        int option;
+        boolean condition = false;
+        try{
+            while(!condition){
+                System.out.println("****************************");
+                System.out.println("            MENU            ");
+                System.out.println("****************************");
+                System.out.println("\n1.) Modificar el nombre de un dinosaurio.");
+                System.out.println("2.) Crear un Entrenador.");
+                System.out.println("3.) Crear un Veterinario.");
+                System.out.println("4.) Generar informes de datos.");
+                System.out.println("5.) Salir.");
+                System.out.println("\nElija una opcion de acuerdo a lo que desee realizar: ");
+                option = scanner.nextInt();
+                
+                if (option == 1){
+                    modifyDinoName(dinosaurs);
+                } else if(option == 2){
+                    createTrainer(staff);
+                }else if(option == 3){
+                    createVeterinarian(staff);
+                }else if(option == 4){
+                    writeFile(habitats, dinosaurs,staff);
+                }else if(option == 5){
+                    condition = true;
+                }else{
+                    System.out.println("La opción ingresada no existe, intente nuevamente.");
                 }
             }
-        }
+        
+        }catch(Exception e){
+            System.out.println("Error: Incorrect information has been entered.");
+        }   
     }
-    
-}*/
+}
+
