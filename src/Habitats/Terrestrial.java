@@ -44,8 +44,13 @@ public class Terrestrial extends Habitat{
     
     @Override
     public String toString(){
-        String str = super.toString() + "Soil Type: " + this.getSoilType() +
-                "\nAverage Humidity: " + this.getAverageHumidity();
+        String str = super.toString() + "\nSoil Type: " + this.getSoilType() +
+                "\nAverage Humidity: " + this.getAverageHumidity()  + "\nDinos in habitats:\n";
+        for (Dinosaur d : dinosInHabitat) {
+            String namedino = d.getName();
+            String dinoclass = d.getClass().getSimpleName();
+             str+= dinoclass + ": " + namedino + "\n";
+        }
         return str;
     }
     

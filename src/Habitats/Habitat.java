@@ -57,12 +57,7 @@ public abstract class Habitat {
     
     @Override
     public String toString() {
-        String str = "\nHabitat: " + this.getClass().getSimpleName() + "\nUbication: " + this.getUbication() + "\nName: " + this.getName() + "\nDinos in habitats:\n";
-        for (Dinosaur d : dinosInHabitat) {
-            String namedino = d.getName();
-            String dinoclass = d.getClass().getSimpleName();
-             str+= dinoclass + ": " + namedino + "\n";
-        }
+        String str = this.getClass().getSimpleName() + "\nUbication: " + this.getUbication() + "\nName: " + this.getName();
         return str;
     }
 }

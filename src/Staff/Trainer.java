@@ -62,11 +62,11 @@ public class Trainer  extends Person implements DinoStaffFunctions{
     
     @Override
     public String toString(){
-        String str = super.toString() + "\nExperienceYears: " + this.getExperienceYears() + "\nSpeciality: " + this.getSpeciality() + "\nSalary: " + this.getSalary() + "\nDinosaurs in charge:\n"; 
+        String str = super.toString() + "\nExperienceYears: " + this.getExperienceYears() + "\nSpeciality: " + this.getSpeciality() + "\nSalary" + this.getSalary() + "\nDinosaurs in charge"; 
         for(Dinosaur d: dinosToTrain){
             String dinoClass = d.getClass().getSimpleName();
             String dinoName = d.getName();
-           str+= dinoClass + ": " + dinoName + "\n";
+           str+= dinoClass + ": " + dinoName + " ";
         }
         return str;
     }

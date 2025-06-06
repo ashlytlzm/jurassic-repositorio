@@ -56,7 +56,7 @@ public abstract class Person {
     
     @Override
     public String toString(){
-        String str = "\nStaff: " + this.getClass().getSimpleName() + "\nName: " + this.getName() + "\nAge: " + this.getAge() + "\nId: " + this.getId();
+        String str = getClass().getSimpleName() + "\nName: " + this.getName() + "\nAge: " + this.getAge() + "\nId: " + this.getId();
         return str;
     }
     

@@ -43,8 +43,13 @@ public class Aerial extends Habitat{
    
     @Override
     public String toString(){
-        String str = super.toString() + "Max Altitude: " + this.getMaxAltitude() + "m" + 
-                "\nWind Speed Average: " + this.getWindSpeedAvg() + "m/s";
+        String str = super.toString() + "\nMax Altitude: " + this.getMaxAltitude() + "m" + 
+                "\nWind Speed Average: " + this.getWindSpeedAvg() + "m/s"  + "\nDinos in habitats:\n";
+        for (Dinosaur d : dinosInHabitat) {
+            String namedino = d.getName();
+            String dinoclass = d.getClass().getSimpleName();
+             str+= dinoclass + ": " + namedino + "\n";
+        }
         return str;
     }
     

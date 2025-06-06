@@ -59,7 +59,7 @@ public class Veterinarian extends Person implements DinoStaffFunctions{
     }
     @Override
     public String toString(){
-        String str = super.toString() + "\nSpecialization: " + this.getSpecialization() + "\nSalary: " + this.getSalary() + "\nDinossaurs to care:\n";
+        String str = super.toString() + "\nSpecialization: " + this.getSpecialization() + "\nSalary: " + this.getSalary() + "\nDinosaurs to care:\n";
         for(Dinosaur d: dinosToCare){
             String dinoClass = d.getClass().getSimpleName();
             String dinoName = d.getName();

@@ -45,8 +45,13 @@ public class Marine extends Habitat{
     
     @Override
     public String toString(){
-        String str = super.toString() + "Water Temperature: " + this.getWaterTemperature() +
-                "\nSalinity Level: " + this.getSalinityLevel() + "%";
+        String str = super.toString() + "\nWater Temperature: " + this.getWaterTemperature() +
+                "\nSalinity Level: " + this.getSalinityLevel() + "%"  + "\nDinos in habitats:\n";
+        for (Dinosaur d : dinosInHabitat) {
+            String namedino = d.getName();
+            String dinoclass = d.getClass().getSimpleName();
+             str+= dinoclass + ": " + namedino + "\n";
+        }
         return str;
     }
        
