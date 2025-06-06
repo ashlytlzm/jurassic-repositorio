@@ -424,7 +424,8 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
             int age = scanner.nextInt();
             System.out.print("\nEnter the ID of the Trainer: ");
             String id = scanner.nextLine();
-            System.out.print("\nEnter the years of experiende of the Trainer: ");
+            scanner.nextLine();
+            System.out.print("\nEnter the years of experience of the Trainer: ");
             int experienceYears = scanner.nextInt();
             System.out.print("\nEnter the speciality of the Trainer: ");
             String speciality = scanner.nextLine();
@@ -443,6 +444,7 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
         try{
             System.out.print("\nEnter the name of the Veterinarian: ");
             String name = scanner.nextLine();
+            scanner.nextLine();
             System.out.print("\nEnter the age of the Veterinarian: ");
             int age = scanner.nextInt();
             System.out.print("\nEnter the id of the Veterinarian: ");
