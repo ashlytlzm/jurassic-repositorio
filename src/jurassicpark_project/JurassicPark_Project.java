@@ -444,11 +444,11 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
         try{
             System.out.print("\nEnter the name of the Veterinarian: ");
             String name = scanner.nextLine();
-            scanner.nextLine();
             System.out.print("\nEnter the age of the Veterinarian: ");
             int age = scanner.nextInt();
             System.out.print("\nEnter the id of the Veterinarian: ");
             String id = scanner.nextLine();
+            scanner.nextLine();
             System.out.print("\nEnter the specialization of the Veterinarian: ");
             String specialization = scanner.nextLine();
             Veterinarian intern2 = new Veterinarian(name,age,id,specialization);
