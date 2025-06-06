@@ -1,0 +1,50 @@
+<<LIST OF STAFF>>
+Trainer
+Name: Alan Grant
+Age: 45
+Id: 04
+ExperienceYears: 15
+Speciality: Raptor behavior specialist
+Salary5600.0
+Dinosaurs in chargeMosasaurus: WaterMarine Velociraptor: Raptor2 Branchiosaurus: Bruno Pterodactylus: FlyStan 
+Trainer
+Name: Sarah Harding
+Age: 38
+Id: 03
+ExperienceYears: 30
+Speciality: Branchiosaurus
+Salary16100.0
+Dinosaurs in chargeBranchiosaurus: Bruno Pterodactylus: FlyStan 
+Veterinarian
+Name: Laura Sorkin
+Age: 50
+Id: 02
+Specialization: Dino medicine expert
+Salary: 2300.0
+Dinosaurs to care:
+Branchiosaurus: Bruno
+Mosasaurus: WaterMarine
+Pterodactylus: FlyStan
+Velociraptor: RaptorX
+Velociraptor: Raptor2
+
+Shopkeeper
+Name: Bob Barnes
+Age: 29
+Id: 01
+Inventory Managed: 450
+Work Overtime: 12.5 hours
+   ██████   
+   ██████   
+██████████
+██████████
+   ██████   
+   ██████   
+ Veterinarian
+   _____
+  |_____|
+  ( ^_^ )
+  /|_|_|\
+    |_|
+   /   \
+  Trainer

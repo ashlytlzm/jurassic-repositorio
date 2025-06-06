@@ -1,0 +1,53 @@
+<<LIST OF HABITATS>>
+Aerial
+Ubication: North Mountain
+Name: Cloud Peak
+Max Altitude: 3000.0m
+Wind Speed Average: 12.5m/s
+Dinos in habitats:
+Pterodactylus: FlyStan
+
+Marine
+Ubication: Pacific Ocean
+Name: Deep Blue
+Water Temperature: 15.0
+Salinity Level: 3.5%
+Dinos in habitats:
+Mosasaurus: WaterMarine
+
+Terrestrial
+Ubication: Savannah
+Name: Golden Plains
+Soil Type: Sandy
+Average Humidity: 65.0
+Dinos in habitats:
+Velociraptor: RaptorX
+Velociraptor: Raptor2
+
+Aerial
+Ubication: Rocky Heights
+Name: Eagle Nest
+Max Altitude: 2500.0m
+Wind Speed Average: 20.0m/s
+Dinos in habitats:
+
+Marine
+Ubication: Atlantic Ocean
+Name: Coral Reef
+Water Temperature: 22.0
+Salinity Level: 3.8%
+Dinos in habitats:
+
+Terrestrial
+Ubication: Amazon Forest
+Name: Green Jungle
+Soil Type: Loamy
+Average Humidity: 85.0
+Dinos in habitats:
+Branchiosaurus: Bruno
+
+     &&&     &&&     &&&
+    &&&&&   &&&&&   &&&&&
+      ||      ||      ||
+      ||      ||      ||
+  -------------------------

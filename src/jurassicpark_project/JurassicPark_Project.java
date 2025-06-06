@@ -475,8 +475,9 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
         System.out.println("Creating the lists...");
         int option;
         boolean condition = false;
-        try{
-            while(!condition){
+        
+        while(!condition){
+            try{
                 System.out.println("****************************");
                 System.out.println("    JURASSIC PARK'S MENU    ");
                 System.out.println(
@@ -493,7 +494,7 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
                 System.out.println("5.) Exit.");
                 System.out.println("\nChoose an option according to what you want to do: ");
                 option = scanner.nextInt();
-                
+
                 if (option == 1){
                     modifyDinoName(dinosaurs);
                 } else if(option == 2){
@@ -509,10 +510,10 @@ public static ArrayList<Dinosaur> readDinosaurs(String filePath) {
                 }else{
                     System.out.println("The selected option does not exist, please try again.");
                 }
+            }catch(Exception e){
+                System.out.println("Error: Incorrect information has been entered.");
+                scanner.nextLine();
             }
-        
-        }catch(Exception e){
-            System.out.println("Error: Incorrect information has been entered.");
         }   
     }
 }

@@ -1,0 +1,67 @@
+<<LIST OF DINOSAURS>>
+Branchiosaurus
+ID: 06
+Name: Bruno
+Age: 12
+Weigth: 800.5kg
+Neck Length: 3.2cm
+Daily Food Intake: 250.0L
+FEEDING: 
+Type of food: Herbivorus
+Amount Per Meal: 250
+Frecuency: 3
+
+Mosasaurus
+ID: 02
+Name: WaterMarine
+Age: 15
+Weigth: 1200.0kg
+SwimDepth: 300.5m
+Behavior: "Aggressive"
+FEEDING: 
+Type of food: Carnivorous
+Amount Per Meal: 300
+Frecuency: 5
+
+Pterodactylus
+ID: 01
+Name: FlyStan
+Age: 8
+Weigth: 30.7kg
+Wingspan: 5.5cm
+Flight Range: 120.0Km
+FEEDING: 
+Type of food: Carnivorous
+Amount Per Meal: 120
+Frecuency: 4
+
+Velociraptor
+ID: 03
+Name: RaptorX
+Age: 5
+Weigth: 75.3kg
+Agility Level: 9
+Speed: 65.4Km/h
+FEEDING: 
+Type of food: Carnivorous
+Amount Per Meal: 65
+Frecuency: 2
+
+Velociraptor
+ID: 03
+Name: Raptor2
+Age: 5
+Weigth: 75.3kg
+Agility Level: 9
+Speed: 65.4Km/h
+FEEDING: 
+Type of food: Carnivorous
+Amount Per Meal: 65
+Frecuency: 2
+
+           __
+          /*_*)
+  _.----._/ /
+ /         /
+/  (|  (|  |
+\_/|_/\_|_/
